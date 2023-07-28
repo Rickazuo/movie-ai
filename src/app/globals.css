@@ -34,4 +34,8 @@
 body {
   background: var(--gradientes-gradiente-normal);
   height: 100dvh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
