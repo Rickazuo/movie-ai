@@ -27,3 +27,10 @@
 .recommendation:hover {
   filter: brightness(120%);
 }
+
+@media screen and (max-width: 1200px) {
+  .header {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

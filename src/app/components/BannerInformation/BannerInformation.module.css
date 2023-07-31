@@ -86,3 +86,14 @@
   filter: brightness(110%);
   cursor: pointer;
 }
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 18.75rem;
+  height: 34.125rem;
+  text-align: center;
+  background: black;
+}

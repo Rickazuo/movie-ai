@@ -8,6 +8,7 @@ import calendar from "../../../../public/calendarIcon.svg";
 import playButton from "../../../../public/playButton.svg";
 import { useEffect, useState } from "react";
 import { generateEtags } from "../../../../next.config";
+import loadingIcon from "../../../../public/loadingIcon.gif";
 
 const top100MoviesIDs = [
   "tt0111161",
@@ -135,6 +136,14 @@ const shuffleArray = (array) => {
   return shuffledArray;
 };
 
+const secondsToHours = (seconds) => {
+  const hours = Math.floor(seconds / 3600);
+  const minutes = Math.floor((seconds % 3600) / 60);
+  const formattedHours = hours.toString().padStart(2, "0");
+  const formattedMinutes = minutes.toString().padStart(2, "0");
+  return `${formattedHours}:${formattedMinutes}`;
+};
+
 export default function BannerInformation() {
   const [movieData, setMovieData] = useState(null);
   const [randomTTIndex, setrandomTTIndex] = useState(0);
@@ -185,7 +194,7 @@ export default function BannerInformation() {
           <div className={styles.timerCalendar}>
             <div className={styles.duration}>
               <Image src={clock} alt="icon of a clock" width={20} height={20} />
-              <span>{movieData.top?.runtime?.seconds}</span>
+              <span>{secondsToHours(movieData.top?.runtime?.seconds)}</span>
             </div>
             <div className={styles.calendar}>
               <Image
@@ -197,7 +206,11 @@ export default function BannerInformation() {
               <span>{movieData.top?.releaseYear?.year}</span>
             </div>
           </div>
-          <a href={movieData.short?.url} className={styles.playButton}>
+          <a
+            href={movieData.short?.url}
+            target="_blank"
+            className={styles.playButton}
+          >
             <Image
               src={playButton}
               alt="icon of a play button"
@@ -208,7 +221,9 @@ export default function BannerInformation() {
           </a>
         </>
       ) : (
-        <p>Loading...</p>
+        <p className={styles.loading}>
+          <Image src={loadingIcon} alt="loading gif" width={50} height={50} />
+        </p>
       )}
     </main>
   );
