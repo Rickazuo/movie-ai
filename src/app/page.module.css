@@ -18,3 +18,17 @@
   align-items: center;
   gap: 2.12rem;
 }
+
+@media screen and (max-width: 1200px) {
+  .box {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    padding-bottom: 2rem;
+  }
+  .posters {
+    flex-direction: column;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+}
