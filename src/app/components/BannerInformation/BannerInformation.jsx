@@ -186,6 +186,7 @@ export default function BannerInformation() {
             </div>
           </header>
           <Image
+            className={styles.poster}
             src={movieData.short.image}
             alt="image of poster movie"
             width={300}

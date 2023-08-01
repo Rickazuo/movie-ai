@@ -36,6 +36,16 @@
   line-height: 0.9005rem;
 }
 
+.poster {
+  border-radius: 1rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.poster:hover {
+  transform: scale(1.05);
+  filter: brightness(115%);
+}
+
 .timerCalendar {
   display: flex;
   justify-content: space-between;
