@@ -33,7 +33,7 @@ This project was developed using the following technologies:
 
 The project _AI-movie platform_ was carried out as part of the #30 challenge #BORACODAR from RocketSeat suggested by <a href="https://github.com/maykbrito" alt="Link para o GitHub do professor Mayk Brito" target="_blank">Mayk Brito</a>. The project is solely a visual demonstration that utilizes Javascript, CSS effects, and an API (https://search.imdbot.workers.dev) to generate recommended movies.
 
-_<h2 align="center" ><a href="https://ai-image-improvement.vercel.app/" target="_blank">Visit the project online</a></h2>_
+_<h2 align="center" ><a href="https://movie-ai-chi.vercel.app/" target="_blank">Visit the project online</a></h2>_
 
 ## 📃 Collaborators
 
